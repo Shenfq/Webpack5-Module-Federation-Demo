@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-import img1 from '../images/1.jpg'
-import img2 from '../images/2.jpg'
-import img3 from '../images/3.jpg'
-import img4 from '../images/4.jpg'
+const images = [
+  'https://w.wallhaven.cc/full/95/wallhaven-95r8l8.png',
+  'https://w.wallhaven.cc/full/lm/wallhaven-lmlgy2.png',
+  'https://w.wallhaven.cc/full/gj/wallhaven-gj22ge.png',
+  'https://w.wallhaven.cc/full/d5/wallhaven-d5lezl.png'
+]
 
-const images = [img1, img2, img3, img4]
-// transition: all 1s;
-// transform: translateX(-100%)
 const Slides = () => {
   const [num, changeNum] = useState(0);
   const left = () => {
@@ -36,7 +35,7 @@ const Slides = () => {
     textAlign: 'center',
   }
   return (
-    <div style={{ position: 'relative', height: 300, margin: '0 20px', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', height: 400, margin: '0 20px', overflow: 'hidden' }}>
       < div style={{
         whiteSpace: 'nowrap',
         transition: 'transform .6s',

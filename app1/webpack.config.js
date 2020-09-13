@@ -16,10 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader'
-      },
-      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -37,8 +33,13 @@ module.exports = {
       exposes: {
         "./Slides": "./src/Slides",
       },
-      library: { type: "var", name: "app1" },
-      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+      remotes: {
+        app2: "app2@http://localhost:3002/remoteEntry.js",
+      },
+      shared: {
+        react: { singleton: true },
+        "react-dom": { singleton: true }
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
