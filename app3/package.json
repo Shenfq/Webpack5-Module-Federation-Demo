@@ -15,7 +15,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "serve": "serve dist -p 3002",
+    "serve": "serve dist -p 3003",
     "clean": "rm -rf dist"
   },
   "dependencies": {

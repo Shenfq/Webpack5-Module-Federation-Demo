@@ -37,6 +37,7 @@ module.exports = {
       exposes: {
         "./Slides": "./src/Slides",
       },
+      library: { type: "var", name: "app1" },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
     new HtmlWebpackPlugin({
