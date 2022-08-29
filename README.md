@@ -12,10 +12,10 @@
 npm install
 ```
 
-运行 `npx lerna bootstrap` 安装各个分包的依赖。
+运行 `npx lerna bootstrap -- --legacy-peer-deps` 安装各个分包的依赖。
 
 ```bash
-npx lerna bootstrap
+npx lerna bootstrap -- --legacy-peer-deps
 ```
 
 ## 运行 DEMO
